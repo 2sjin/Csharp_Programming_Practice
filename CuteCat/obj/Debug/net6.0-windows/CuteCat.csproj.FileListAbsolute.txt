@@ -1,0 +1,17 @@
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\bin\Debug\net6.0-windows\CuteCat.exe
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\bin\Debug\net6.0-windows\CuteCat.deps.json
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\bin\Debug\net6.0-windows\CuteCat.runtimeconfig.json
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\bin\Debug\net6.0-windows\CuteCat.dll
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\bin\Debug\net6.0-windows\CuteCat.pdb
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.csproj.AssemblyReference.cache
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.Form1.resources
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.csproj.GenerateResource.cache
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.AssemblyInfoInputs.cache
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.AssemblyInfo.cs
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.csproj.CoreCompileInputs.cache
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.dll
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\refint\CuteCat.dll
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.pdb
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\CuteCat.genruntimeconfig.cache
+D:\workspace\visualstudio-workspace\C#\HelloCSharpWin\CuteCat\obj\Debug\net6.0-windows\ref\CuteCat.dll

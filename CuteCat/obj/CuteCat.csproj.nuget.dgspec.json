@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\HelloCSharpWin\\HelloCSharpWin.csproj": {}
+    "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\CuteCat\\CuteCat.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\HelloCSharpWin\\HelloCSharpWin.csproj": {
+    "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\CuteCat\\CuteCat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\HelloCSharpWin\\HelloCSharpWin.csproj",
-        "projectName": "HelloCSharpWin",
-        "projectPath": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\HelloCSharpWin\\HelloCSharpWin.csproj",
+        "projectUniqueName": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\CuteCat\\CuteCat.csproj",
+        "projectName": "CuteCat",
+        "projectPath": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\CuteCat\\CuteCat.csproj",
         "packagesPath": "C:\\Users\\Richet\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\HelloCSharpWin\\obj\\",
+        "outputPath": "D:\\workspace\\visualstudio-workspace\\C#\\HelloCSharpWin\\CuteCat\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
