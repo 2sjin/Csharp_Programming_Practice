@@ -13,8 +13,14 @@ namespace AnimalShelter {
             cus.address = CustomNewAddress.Text;
             cus.description = CustomNewDescription.Text;
 
-            CustomerList.Items.Add(cus.firstName);
+            CustomerList.Rows.Add(cus.firstName, cus.Age, cus.IsQualified);
             customers.Add(cus);
+
+            CustomNewFirstName.Text = "";
+            CustomNewLastName.Text = "";
+            CustomNewBirthday.Text = "";
+            CustomNewAddress.Text = "";
+            CustomNewDescription.Text = "";
         }
 
         public void showDetails(Customer cus) {
@@ -25,8 +31,8 @@ namespace AnimalShelter {
             IsQualifiedLabel.Text = cus.IsQualified;
         }
 
-        private void CustomerList_SelectedIndexChanged(object sender, EventArgs e) {
-            string selectedFirstName = CustomerList.SelectedItem.ToString();
+        private void CustomerList_CellClick(object sender, DataGridViewCellEventArgs e) {
+            string selectedFirstName = (string) CustomerList.Rows[e.RowIndex].Cells[0].Value;
 
             foreach (Customer cus in customers) {
                 if (cus.firstName == selectedFirstName) {
@@ -34,8 +40,19 @@ namespace AnimalShelter {
                     break;
                 }
             }
-
+            CustomerDetailPanel.Show();
+            CustomerNewPanel.Hide();
         }
 
+        private void Form1_Load(object sender, EventArgs e) {
+            CustomerListPanel.Dock = DockStyle.Fill;
+            CustomerDetailPanel.Dock = DockStyle.Right;
+            CustomerNewPanel.Dock = DockStyle.Right;
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e) {
+            CustomerNewPanel.Show();
+            CustomerDetailPanel.Hide();
+        }
     }
 }

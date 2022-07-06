@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.CreateCustomerButton = new System.Windows.Forms.Button();
-            this.CustomNewPanel = new System.Windows.Forms.Panel();
+            this.CustomerNewPanel = new System.Windows.Forms.Panel();
             this.CustomNewDescription = new System.Windows.Forms.TextBox();
             this.CustomNewAddress = new System.Windows.Forms.TextBox();
             this.CustomNewBirthday = new System.Windows.Forms.TextBox();
@@ -46,9 +46,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.IsQualifiedLabel = new System.Windows.Forms.Label();
             this.CustomerDetailPanel = new System.Windows.Forms.Panel();
-            this.CustomerList = new System.Windows.Forms.ListBox();
-            this.CustomNewPanel.SuspendLayout();
+            this.CustomerListPanel = new System.Windows.Forms.Panel();
+            this.CustomerList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.CustomerNewPanel.SuspendLayout();
             this.CustomerDetailPanel.SuspendLayout();
+            this.CustomerListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CreateCustomerButton
@@ -57,28 +66,29 @@
             this.CreateCustomerButton.Name = "CreateCustomerButton";
             this.CreateCustomerButton.Size = new System.Drawing.Size(136, 40);
             this.CreateCustomerButton.TabIndex = 5;
-            this.CreateCustomerButton.Text = "입양자 생성";
+            this.CreateCustomerButton.Text = "새 고객 생성";
             this.CreateCustomerButton.UseVisualStyleBackColor = true;
             this.CreateCustomerButton.Click += new System.EventHandler(this.CreateCustomerButton_Click);
             // 
-            // CustomNewPanel
+            // CustomerNewPanel
             // 
-            this.CustomNewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CustomNewPanel.Controls.Add(this.CustomNewDescription);
-            this.CustomNewPanel.Controls.Add(this.CustomNewAddress);
-            this.CustomNewPanel.Controls.Add(this.CreateCustomerButton);
-            this.CustomNewPanel.Controls.Add(this.CustomNewBirthday);
-            this.CustomNewPanel.Controls.Add(this.CustomNewFirstName);
-            this.CustomNewPanel.Controls.Add(this.CustomNewLastName);
-            this.CustomNewPanel.Controls.Add(this.label3);
-            this.CustomNewPanel.Controls.Add(this.label7);
-            this.CustomNewPanel.Controls.Add(this.label11);
-            this.CustomNewPanel.Controls.Add(this.label13);
-            this.CustomNewPanel.Controls.Add(this.label15);
-            this.CustomNewPanel.Location = new System.Drawing.Point(27, 25);
-            this.CustomNewPanel.Name = "CustomNewPanel";
-            this.CustomNewPanel.Size = new System.Drawing.Size(462, 404);
-            this.CustomNewPanel.TabIndex = 12;
+            this.CustomerNewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CustomerNewPanel.Controls.Add(this.CustomNewDescription);
+            this.CustomerNewPanel.Controls.Add(this.CustomNewAddress);
+            this.CustomerNewPanel.Controls.Add(this.CreateCustomerButton);
+            this.CustomerNewPanel.Controls.Add(this.CustomNewBirthday);
+            this.CustomerNewPanel.Controls.Add(this.CustomNewFirstName);
+            this.CustomerNewPanel.Controls.Add(this.CustomNewLastName);
+            this.CustomerNewPanel.Controls.Add(this.label3);
+            this.CustomerNewPanel.Controls.Add(this.label7);
+            this.CustomerNewPanel.Controls.Add(this.label11);
+            this.CustomerNewPanel.Controls.Add(this.label13);
+            this.CustomerNewPanel.Controls.Add(this.label15);
+            this.CustomerNewPanel.Location = new System.Drawing.Point(388, 31);
+            this.CustomerNewPanel.Name = "CustomerNewPanel";
+            this.CustomerNewPanel.Size = new System.Drawing.Size(585, 404);
+            this.CustomerNewPanel.TabIndex = 12;
+            this.CustomerNewPanel.Visible = false;
             // 
             // CustomNewDescription
             // 
@@ -253,7 +263,6 @@
             // 
             // CustomerDetailPanel
             // 
-            this.CustomerDetailPanel.Controls.Add(this.CustomerList);
             this.CustomerDetailPanel.Controls.Add(this.IsQualifiedLabel);
             this.CustomerDetailPanel.Controls.Add(this.label2);
             this.CustomerDetailPanel.Controls.Add(this.DescriptionLabel);
@@ -264,42 +273,113 @@
             this.CustomerDetailPanel.Controls.Add(this.label6);
             this.CustomerDetailPanel.Controls.Add(this.NameLabel);
             this.CustomerDetailPanel.Controls.Add(this.label4);
-            this.CustomerDetailPanel.Location = new System.Drawing.Point(516, 25);
+            this.CustomerDetailPanel.Location = new System.Drawing.Point(388, 56);
             this.CustomerDetailPanel.Name = "CustomerDetailPanel";
-            this.CustomerDetailPanel.Size = new System.Drawing.Size(541, 404);
+            this.CustomerDetailPanel.Size = new System.Drawing.Size(585, 404);
             this.CustomerDetailPanel.TabIndex = 1;
+            // 
+            // CustomerListPanel
+            // 
+            this.CustomerListPanel.Controls.Add(this.CustomerList);
+            this.CustomerListPanel.Location = new System.Drawing.Point(23, 31);
+            this.CustomerListPanel.Name = "CustomerListPanel";
+            this.CustomerListPanel.Size = new System.Drawing.Size(359, 429);
+            this.CustomerListPanel.TabIndex = 13;
             // 
             // CustomerList
             // 
-            this.CustomerList.FormattingEnabled = true;
-            this.CustomerList.ItemHeight = 20;
-            this.CustomerList.Location = new System.Drawing.Point(391, 16);
+            this.CustomerList.AllowUserToAddRows = false;
+            this.CustomerList.AllowUserToDeleteRows = false;
+            this.CustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.CustomerList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.CustomerList.Location = new System.Drawing.Point(0, 0);
+            this.CustomerList.MultiSelect = false;
             this.CustomerList.Name = "CustomerList";
-            this.CustomerList.Size = new System.Drawing.Size(128, 364);
-            this.CustomerList.TabIndex = 13;
-            this.CustomerList.SelectedIndexChanged += new System.EventHandler(this.CustomerList_SelectedIndexChanged);
+            this.CustomerList.RowHeadersWidth = 51;
+            this.CustomerList.RowTemplate.Height = 29;
+            this.CustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CustomerList.Size = new System.Drawing.Size(359, 429);
+            this.CustomerList.TabIndex = 0;
+            this.CustomerList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerList_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 125F;
+            this.Column1.HeaderText = "이름";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 70F;
+            this.Column2.HeaderText = "나이";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 150F;
+            this.Column3.HeaderText = "분양가능여부";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(985, 28);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
+            this.toolStripMenuItem1.Text = "새 고객 생성";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 455);
-            this.Controls.Add(this.CustomNewPanel);
+            this.ClientSize = new System.Drawing.Size(985, 479);
+            this.Controls.Add(this.CustomerListPanel);
+            this.Controls.Add(this.CustomerNewPanel);
             this.Controls.Add(this.CustomerDetailPanel);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.CustomNewPanel.ResumeLayout(false);
-            this.CustomNewPanel.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.CustomerNewPanel.ResumeLayout(false);
+            this.CustomerNewPanel.PerformLayout();
             this.CustomerDetailPanel.ResumeLayout(false);
             this.CustomerDetailPanel.PerformLayout();
+            this.CustomerListPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Button CreateCustomerButton;
-        private Panel CustomNewPanel;
+        private Panel CustomerNewPanel;
         private Label label3;
         private Label label7;
         private Label label11;
@@ -321,6 +401,12 @@
         private Label label2;
         private Label IsQualifiedLabel;
         private Panel CustomerDetailPanel;
-        private ListBox CustomerList;
+        private Panel CustomerListPanel;
+        private DataGridView CustomerList;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }
