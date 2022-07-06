@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AnimalShelter {
-    internal class Customer {
+    public class Customer {
         public string firstName;
         public string lastName;
         private DateTime _birthday;
@@ -21,6 +21,10 @@ namespace AnimalShelter {
             this._isQualified = (DateTime.Now.Year - _birthday.Year >= 18);
         }
 
+        public int Age {
+            get { return DateTime.Now.Year - _birthday.Year; }
+        }
+
         public DateTime Birthday {
             get { return _birthday; }
             set {
@@ -29,8 +33,13 @@ namespace AnimalShelter {
             }
         }
 
-        public bool IsQualified {
-            get { return _isQualified; }
+        public string IsQualified {
+            get {
+                if (_isQualified)
+                    return "분양 가능";
+                else
+                    return "분양 불가능";
+            }
         }
 
         public string FullName {
