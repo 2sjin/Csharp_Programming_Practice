@@ -238,14 +238,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 10;
-            this.label2.Text = "분양: ";
+            this.label2.Text = "분양가능여부: ";
             // 
             // IsQualifiedLabel
             // 
             this.IsQualifiedLabel.AutoSize = true;
-            this.IsQualifiedLabel.Location = new System.Drawing.Point(76, 111);
+            this.IsQualifiedLabel.Location = new System.Drawing.Point(138, 111);
             this.IsQualifiedLabel.Name = "IsQualifiedLabel";
             this.IsQualifiedLabel.Size = new System.Drawing.Size(15, 20);
             this.IsQualifiedLabel.TabIndex = 11;
