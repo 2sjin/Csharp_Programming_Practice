@@ -53,6 +53,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PetInfoLabel = new System.Windows.Forms.Label();
             this.CustomerNewPanel.SuspendLayout();
             this.CustomerDetailPanel.SuspendLayout();
             this.CustomerListPanel.SuspendLayout();
@@ -86,13 +88,13 @@
             this.CustomerNewPanel.Controls.Add(this.label15);
             this.CustomerNewPanel.Location = new System.Drawing.Point(388, 31);
             this.CustomerNewPanel.Name = "CustomerNewPanel";
-            this.CustomerNewPanel.Size = new System.Drawing.Size(585, 404);
+            this.CustomerNewPanel.Size = new System.Drawing.Size(472, 404);
             this.CustomerNewPanel.TabIndex = 12;
             this.CustomerNewPanel.Visible = false;
             // 
             // CustomNewDescription
             // 
-            this.CustomNewDescription.Location = new System.Drawing.Point(89, 205);
+            this.CustomNewDescription.Location = new System.Drawing.Point(89, 191);
             this.CustomNewDescription.Multiline = true;
             this.CustomNewDescription.Name = "CustomNewDescription";
             this.CustomNewDescription.Size = new System.Drawing.Size(346, 120);
@@ -100,7 +102,7 @@
             // 
             // CustomNewAddress
             // 
-            this.CustomNewAddress.Location = new System.Drawing.Point(89, 165);
+            this.CustomNewAddress.Location = new System.Drawing.Point(89, 151);
             this.CustomNewAddress.Name = "CustomNewAddress";
             this.CustomNewAddress.Size = new System.Drawing.Size(346, 27);
             this.CustomNewAddress.TabIndex = 3;
@@ -138,7 +140,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 208);
+            this.label7.Location = new System.Drawing.Point(25, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 20);
             this.label7.TabIndex = 8;
@@ -147,7 +149,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 168);
+            this.label11.Location = new System.Drawing.Point(25, 154);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 20);
             this.label11.TabIndex = 6;
@@ -210,7 +212,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 168);
+            this.label8.Location = new System.Drawing.Point(25, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 20);
             this.label8.TabIndex = 6;
@@ -219,7 +221,7 @@
             // AddressLabel
             // 
             this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Location = new System.Drawing.Point(76, 166);
+            this.AddressLabel.Location = new System.Drawing.Point(76, 148);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(15, 20);
             this.AddressLabel.TabIndex = 7;
@@ -228,7 +230,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(25, 208);
+            this.label10.Location = new System.Drawing.Point(25, 190);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 20);
             this.label10.TabIndex = 8;
@@ -237,7 +239,7 @@
             // DescriptionLabel
             // 
             this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(76, 208);
+            this.DescriptionLabel.Location = new System.Drawing.Point(76, 190);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(15, 20);
             this.DescriptionLabel.TabIndex = 9;
@@ -263,6 +265,8 @@
             // 
             // CustomerDetailPanel
             // 
+            this.CustomerDetailPanel.Controls.Add(this.PetInfoLabel);
+            this.CustomerDetailPanel.Controls.Add(this.label1);
             this.CustomerDetailPanel.Controls.Add(this.IsQualifiedLabel);
             this.CustomerDetailPanel.Controls.Add(this.label2);
             this.CustomerDetailPanel.Controls.Add(this.DescriptionLabel);
@@ -275,7 +279,7 @@
             this.CustomerDetailPanel.Controls.Add(this.label4);
             this.CustomerDetailPanel.Location = new System.Drawing.Point(388, 56);
             this.CustomerDetailPanel.Name = "CustomerDetailPanel";
-            this.CustomerDetailPanel.Size = new System.Drawing.Size(585, 404);
+            this.CustomerDetailPanel.Size = new System.Drawing.Size(472, 404);
             this.CustomerDetailPanel.TabIndex = 1;
             // 
             // CustomerListPanel
@@ -338,7 +342,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(985, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 28);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -350,18 +354,36 @@
             this.toolStripMenuItem1.Text = "새 고객 생성";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 252);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "반려동물:";
+            // 
+            // PetInfoLabel
+            // 
+            this.PetInfoLabel.AutoSize = true;
+            this.PetInfoLabel.Location = new System.Drawing.Point(104, 252);
+            this.PetInfoLabel.Name = "PetInfoLabel";
+            this.PetInfoLabel.Size = new System.Drawing.Size(15, 20);
+            this.PetInfoLabel.TabIndex = 13;
+            this.PetInfoLabel.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 479);
-            this.Controls.Add(this.CustomerListPanel);
-            this.Controls.Add(this.CustomerNewPanel);
+            this.ClientSize = new System.Drawing.Size(872, 479);
             this.Controls.Add(this.CustomerDetailPanel);
+            this.Controls.Add(this.CustomerNewPanel);
+            this.Controls.Add(this.CustomerListPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "`";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.CustomerNewPanel.ResumeLayout(false);
             this.CustomerNewPanel.PerformLayout();
@@ -408,5 +430,7 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Label PetInfoLabel;
+        private Label label1;
     }
 }

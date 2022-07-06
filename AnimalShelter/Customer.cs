@@ -6,23 +6,33 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter {
     public class Customer {
+
+        // =============================================================
+
+        // 멤버: 필드
         public string firstName;
         public string lastName;
         private DateTime _birthday;
         private bool _isQualified;
         public string address;
         public string description;
+        private List<Pet> _MyPets = new List<Pet>();
 
+        // =============================================================
+
+        // 생성자
         public Customer(string firstName, string lastName, DateTime birthday) {
             this.firstName = firstName;
             this.lastName = lastName;
             this._birthday = birthday;
-
             this._isQualified = (DateTime.Now.Year - _birthday.Year >= 18);
         }
 
-        public int Age {
-            get { return DateTime.Now.Year - _birthday.Year; }
+        // =============================================================
+
+        // 멤버: 속성
+        public string FullName {
+            get { return firstName + " " + lastName; }
         }
 
         public DateTime Birthday {
@@ -33,6 +43,11 @@ namespace AnimalShelter {
             }
         }
 
+        public int Age {
+            get { return DateTime.Now.Year - _birthday.Year; }
+        }
+
+
         public string IsQualified {
             get {
                 if (_isQualified)
@@ -42,8 +57,24 @@ namespace AnimalShelter {
             }
         }
 
-        public string FullName {
-            get { return firstName + " " + lastName; }
+        public List<Pet> MyPets {
+            get { return _MyPets; }
         }
+
+        // =============================================================
+
+        // 멤버: 메소드
+        public bool Adopt(Pet pet) {
+            if (_isQualified) {
+                _MyPets.Add(pet);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        // =============================================================
+
     }
 }
